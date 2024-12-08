@@ -15,6 +15,7 @@ export default async function Page(props) {
         urlPath: "/" + (props?.params?.page?.join("/") || ""),
       },
       cachebust: true,
+      
     })
     // Convert the result to a promise
     .toPromise();
@@ -22,6 +23,7 @@ export default async function Page(props) {
   return (
     <>
       {/* Render the Builder page */}
+      
       <RenderBuilderContent content={content} model={builderModelName} />
     </>
   );
